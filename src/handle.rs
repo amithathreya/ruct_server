@@ -1,4 +1,5 @@
 
+
 use std::net::{TcpStream};
 use std::io::{prelude::*, BufReader};
 use std::fs;
@@ -26,7 +27,6 @@ pub fn handle_connection(mut stream: TcpStream) {
             "Error: Could not read the file.".to_string()
         });
         let length = content.len();
-
         let response = format!(
             "{status_line}\r\nContent-Length: {length}\r\n\r\n{content}"
         );
