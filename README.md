@@ -1,2 +1,2 @@
 # rust_server
-crude implementation of tcp server in rust
+A very basic implementation of a multithreaded server in rust.
