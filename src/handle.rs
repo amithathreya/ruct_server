@@ -26,6 +26,7 @@ pub fn handle_connection(mut stream: TcpStream) {
             "Error: Could not read the file.".to_string()
         });
         let length = content.len();
+
         let response = format!(
             "{status_line}\r\nContent-Length: {length}\r\n\r\n{content}"
         );
@@ -34,4 +35,4 @@ pub fn handle_connection(mut stream: TcpStream) {
             eprintln!("Failed to send response: {}", e);
         }
     }
-}
+}   
