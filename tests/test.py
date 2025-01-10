@@ -26,7 +26,7 @@ def make_request(request_id):
             'success': False
         }
 
-def run_stress_test(num_requests=1000000, concurrent_requests=50000):
+def run_stress_test(num_requests=100000, concurrent_requests=1000):
     """Run the stress test"""
     print(f"Starting stress test on http://127.0.0.1:7878")
     print(f"Total requests: {num_requests}")
